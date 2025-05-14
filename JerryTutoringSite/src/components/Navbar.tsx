@@ -1,25 +1,17 @@
-import { useState } from 'react';
 import { CalendarSearch } from "lucide-react";
 
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from '@/components/ui/sheet';
+
 import {GraduationCap} from 'lucide-react';
 export default function Navbar() {
   // State for mobile menu
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full  border-4 bg-white">

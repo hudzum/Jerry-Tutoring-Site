@@ -1,6 +1,5 @@
 import Navbar from "./components/Navbar";
 import "./App.css";
-import { Button } from "./components/ui/button";
 import Squares from "./components/ui/Squares";
 import RotatingText from "./components/ui/RotatingText";
 function App() {

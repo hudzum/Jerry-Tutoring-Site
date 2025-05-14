@@ -53,7 +53,6 @@ import React, {
     (
       {
         texts,
-        transition = { type: "spring", damping: 25, stiffness: 300 },
         initial = { y: "100%", opacity: 0 },
         animate = { y: 0, opacity: 1 },
         exit = { y: "-120%", opacity: 0 },
@@ -76,13 +75,7 @@ import React, {
       const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
   
       const splitIntoCharacters = (text: string): string[] => {
-        if (typeof Intl !== "undefined" && Intl.Segmenter) {
-          const segmenter = new Intl.Segmenter("en", { granularity: "grapheme" });
-          return Array.from(
-            segmenter.segment(text),
-            (segment) => segment.segment
-          );
-        }
+        
         return Array.from(text);
       };
   
@@ -206,7 +199,6 @@ import React, {
           )}
           {...rest}
           layout
-          transition={transition}
         >
           <span className="sr-only">{texts[currentTextIndex]}</span>
           <AnimatePresence
@@ -239,7 +231,6 @@ import React, {
                         animate={animate}
                         exit={exit}
                         transition={{
-                          ...transition,
                           delay: getStaggerDelay(
                             previousCharsCount + charIndex,
                             array.reduce(
