@@ -41,7 +41,7 @@ function App() {
               </span>
             </h1>
             <p className="text-xl mb-6">
-              I am a Tulane Student Studing Political Science and Mathmatetics
+              I am a Tulane Student Studying Political Science and Mathmatetics
               with 5+ Years in Tutoring Experience, focusing on the ACT, Math,
               and English
             </p>
